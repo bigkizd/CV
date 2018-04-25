@@ -1,0 +1,161 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+
+
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{-5pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Toan \textsc{Dao Minh}
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Place and Date of Birth:} & Ho Chi Minh City, VietNam  | dd Month 1997 \\
+    \textsc{Address:}   & 230 Su Van Hanh Street, District 5 \\
+    \textsc{Phone:}     & +84 1645153945\\
+    \textsc{email:}     &  \href{mailto:toandaominh1997@gmail.com}{toandaominh1997@gmail.com}
+\end{tabular}
+
+%Section: Summary
+\section{Sumary}
+\begin{tabular}{rl}
+ \textsc Algorithms, Data structures, Competitive Programming, Machine Learning, Computer Vision,\\ Data Mining, Software Engineering, Game Developper.
+\end{tabular}
+
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}	
+ \textsc{2015 Apr} & \textbf{Ho Chi Minh City University of Science},Vietnam National University, Ho Chi Minh City\\
+present & Currenttly pursuing B.S.E in Computer Science\\
+& Course taken: Calculus, Linear Algebra, Applied Statistic, Infomation Retrieval, Object-oriented\\
+& Programming, Programing Language, Compiler Design, Operating System, SoftwarEngineering.\\
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Project And Work Experience}
+\begin{tabular}{r|p{14cm}}
+ \emph{Jan} 2018 & Developer IOT at \textbf{FPT Software} \\\textsc{May 2018}& Project Name: \textbf{Propose and development IoV system (Internet of vehicle)} \\& Client: Confidential\\& Project size: 80 man-months\\& Position: Software Engineering\\& Responsibilities: Design system, find solution, and Coding module in automotive vehicles\\& Project Description: Investigate and build IoV solution. Design and develop full system for customer.\multicolumn{2}{c}{} \\
+ 
+   
+   \emph{Dec} 2017 & Project about \textbf{Surface Reconstruction 3D from 2D images} \\& Project Description: By using Poison Algorithms to 3D shaped reconstruction from a sequence of 2D images in Point Cloud Library.  \multicolumn{2}{c}{} \\
+   
+  \emph{Oct} 2017 & Project about \textbf{Research and Install NXT Segway with Rider} \\& Project Description: By using the NXT Color Sensor as a simple proximity sensor to the ground to detect the approximate tilt angle of the robot, the robot can actually balance itself!  \multicolumn{2}{c}{} \\
+
+\end{tabular}
+
+%Section: Skill And Expertise info
+\section{Skill And Expertise}
+\begin{tabular}{rl}
+ \textsc{}Algorithms & Especially good at mathematics, graph theories, data structures, and dynamic programming.\\
+\textsc{}Languages & Expert at C/C++, Java, Python. Familiar with Pascal, C\#, HTML, CSS, Javascript.\\
+\textsc{}Platforms & Windows, Linux, MacOS\\
+\textsc{} Software & Ms SQL Server, Git, Eclipse, Visual Studio, Vim, Emacs, NetBeans, Sublime Text.\\
+\textsc{} Others & OpenCV, OpenGL, OpenGL ES, PCL(Point Cloud Library)\\
+\end{tabular}
+
+%Section: Scholarships and additional info
+\section{Honors And Awards}
+\begin{tabular}{rl}
+ \textsc{Mar} 2017 & Go to the semi-finals of the SnackDown 2017 competition hosted by Codechef.com.\\
+\textsc{Summer} 2017 & Join ACM ICPC online of Posts and Telecommunications Institute of Technology with Rank 14/98 team\\
+\textsc{Oct} 2017 & Join The ACM ICPC 2017 VietNam Northern Provincial Contest.\\
+\textsc{Oct} 2017 & Join The ACM ICPC 2017 VietNam Southern Provincial Contest.\\
+\textsc{Oct} 2017 & Consolation prize Student Olympiad in Informatics of Ho Chi Minh City University of Science.\\
+
+\end{tabular}
+
+%Section: FOREIGN LANGUAGE
+\section{Foreigh Language}
+\begin{tabular}{rl}
+\textsc{English:}&Fluent about Reading, Listening\\
+& Conversational about Speaking, Writing
+\end{tabular}
+
+\section{Interests and Activities}
+Technology, Game developer, Open-Source,\\
+Machine Learning, Computer Vision, Natural Language Processing - NLP\\
+
+\end{document}
